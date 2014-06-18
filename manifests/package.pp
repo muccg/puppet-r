@@ -13,6 +13,7 @@ define r::package($repo = 'http://cran.rstudio.com', $dependencies = false) {
     command   => $dependencies_command,
     unless    => "${r::params::bin} -q -e '\"${name}\" %in% installed.packages()' | grep 'TRUE'",
     logoutput => true,
+    timeout   => 600,
     require   => Class['R']
   }
 
