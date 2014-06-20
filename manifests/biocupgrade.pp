@@ -1,5 +1,5 @@
 #
-define r::biocupgrade($repo = 'http://bioconductor.org/biocLite.R') {
+class r::biocupgrade($repo = 'http://bioconductor.org/biocLite.R') {
 
   include r
 
