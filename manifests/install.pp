@@ -1,4 +1,4 @@
 #
 class r::install {
-  package {$r::pkg: ensure => installed }
+  package {$r::pkg: ensure => $r::ensure }
 }
